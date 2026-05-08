@@ -453,6 +453,13 @@ h1, h2, h3, p { margin: 0; }
   filter: sepia(.38) saturate(1.15) hue-rotate(325deg);
 }
 
+.section-hero .info-logo {
+  width: clamp(160px, 24vw, 230px);
+  max-height: 130px;
+  opacity: 1;
+  filter: drop-shadow(0 12px 18px rgba(40, 14, 8, .22));
+}
+
 #panel-rodizios[data-rodizio="pizzas"] .section-hero img {
   filter: sepia(.32) saturate(1.35) hue-rotate(348deg);
 }
@@ -655,9 +662,9 @@ h1, h2, h3, p { margin: 0; }
 }
 
 .site-footer img {
-  width: 58px;
+  width: 128px;
   height: auto;
-  margin: 0 auto 8px;
+  margin: 0 auto 10px;
   filter: drop-shadow(0 8px 12px rgba(22, 6, 3, .28));
 }
 
