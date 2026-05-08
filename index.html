@@ -10,30 +10,40 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-theme="rodizios">
+  <div class="language-switch" aria-label="Idioma">
+    <button class="language-pill is-active" type="button" data-lang="pt" aria-pressed="true">
+      <span class="flag flag-br" aria-hidden="true"></span>
+      <span>BR</span>
+    </button>
+    <button class="language-pill" type="button" data-lang="en" aria-pressed="false">
+      <span class="flag flag-us" aria-hidden="true"></span>
+      <span>US</span>
+    </button>
+  </div>
+
   <main class="menu-shell">
     <header class="cover">
       <div class="cover-content">
-        <span class="menu-word">Cardápio Digital</span>
+        <span class="menu-word" data-i18n="hero.menu">Cardápio Digital</span>
         <img class="brand-logo" src="assets/logo-central-picanha-transparent.png" alt="Central da Picanha">
         <div class="cover-copy">
-          <span class="eyebrow">Rodízio, pizza, crepe e sushi</span>
+          <span class="eyebrow" data-i18n="hero.kicker">Rodízio, pizza, crepe e sushi</span>
           <h1 class="sr-only">Central da Picanha</h1>
-          <p>Almoço forte, churrasco na brasa e uma casa que muda de ritmo conforme a vontade da mesa.</p>
         </div>
       </div>
     </header>
 
-    <nav class="category-nav" id="cardapio" role="tablist" aria-label="Categorias do cardapio">
-      <button class="category-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-rodizios" data-theme="rodizios"><span>01</span>Rodizios</button>
-      <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-sobremesas" data-theme="sobremesas"><span>02</span>Sobremesas</button>
-      <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-bebidas" data-theme="bebidas"><span>03</span>Bebidas</button>
-      <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-drinks" data-theme="drinks"><span>04</span>Drinks</button>
-      <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-vinhos" data-theme="vinhos"><span>05</span>Vinhos</button>
-      <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-info" data-theme="info"><span>06</span>Info</button>
+    <nav class="category-nav" id="cardapio" role="tablist" aria-label="Categorias do cardápio">
+      <button class="category-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-rodizios" data-theme="rodizios"><span>01</span><b data-i18n="nav.rodizios">Rodízios</b></button>
+      <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-sobremesas" data-theme="sobremesas"><span>02</span><b data-i18n="nav.sobremesas">Sobremesas</b></button>
+      <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-bebidas" data-theme="bebidas"><span>03</span><b data-i18n="nav.bebidas">Bebidas</b></button>
+      <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-drinks" data-theme="drinks"><span>04</span><b data-i18n="nav.drinks">Drinks</b></button>
+      <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-vinhos" data-theme="vinhos"><span>05</span><b data-i18n="nav.vinhos">Vinhos</b></button>
+      <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-info" data-theme="info"><span>06</span><b data-i18n="nav.info">Info</b></button>
     </nav>
 
     <section class="menu-status">
-      <span>Valores em R$</span>
+      <span data-i18n="status.prices">Valores em R$</span>
       <span>11h30 - 23h</span>
     </section>
 
@@ -41,57 +51,57 @@
       <section class="panel is-active" id="panel-rodizios" role="tabpanel" data-rodizio="carnes">
         <div class="section-hero">
           <div>
-            <span>Servico da casa</span>
-            <h2>Rodizios</h2>
-            <p>Escolha entre carnes na brasa, pizzas saindo do forno, crepes preparados na hora e sushis.</p>
+            <span data-i18n="rodizios.eyebrow">Serviço da casa</span>
+            <h2 data-i18n="rodizios.title">Rodízios</h2>
+            <p data-i18n="rodizios.desc">Escolha entre carnes na brasa, pizzas saindo do forno, crepes preparados na hora e sushis.</p>
           </div>
           <img class="rodizio-symbol" src="assets/icon-boi-transparent.png" alt="">
         </div>
 
-        <div class="subnav" role="tablist" aria-label="Tipos de rodizio">
-          <button class="subtab is-active" type="button" data-target="rodizio-carnes" data-theme="rodizios" data-rodizio="carnes" data-symbol="assets/icon-boi-transparent.png">Carnes</button>
-          <button class="subtab" type="button" data-target="rodizio-pizzas" data-theme="pizzas" data-rodizio="pizzas" data-symbol="assets/icon-rolo-pizza-transparent.png">Pizzas</button>
-          <button class="subtab" type="button" data-target="rodizio-crepes" data-theme="crepes" data-rodizio="crepes" data-symbol="assets/icon-crepe-clean.png">Crepes</button>
-          <button class="subtab" type="button" data-target="rodizio-sushis" data-theme="sushis" data-rodizio="sushis" data-symbol="assets/icon-temaki-transparent.png">Sushis</button>
+        <div class="subnav" role="tablist" aria-label="Tipos de rodízio">
+          <button class="subtab is-active" type="button" data-target="rodizio-carnes" data-theme="rodizios" data-rodizio="carnes" data-symbol="assets/icon-boi-transparent.png" data-i18n="sub.carnes">Carnes</button>
+          <button class="subtab" type="button" data-target="rodizio-pizzas" data-theme="pizzas" data-rodizio="pizzas" data-symbol="assets/icon-rolo-pizza-transparent.png" data-i18n="sub.pizzas">Pizzas</button>
+          <button class="subtab" type="button" data-target="rodizio-crepes" data-theme="crepes" data-rodizio="crepes" data-symbol="assets/icon-crepe-clean.png" data-i18n="sub.crepes">Crepes</button>
+          <button class="subtab" type="button" data-target="rodizio-sushis" data-theme="sushis" data-rodizio="sushis" data-symbol="assets/icon-temaki-transparent.png" data-i18n="sub.sushis">Sushis</button>
         </div>
 
         <div class="subpanels">
           <section class="subpanel is-active" id="rodizio-carnes">
             <div class="rodizio-intro">
               <article>
-                <span>Almoco</span>
-                <h3>Rodizio de carnes</h3>
-                <p>Cortes servidos na mesa com buffet de acompanhamentos, saladas, guarnicoes e molhos.</p>
+                <span data-i18n="meat.lunch">Almoço</span>
+                <h3 data-i18n="meat.title">Rodízio de carnes</h3>
+                <p data-i18n="meat.desc">Cortes servidos na mesa com buffet de acompanhamentos, saladas, guarnições e molhos.</p>
                 <strong>89,90</strong>
               </article>
               <article>
-                <span>Noite e fim de semana</span>
-                <h3>Rodizio especial</h3>
-                <p>Selecao ampliada de cortes, linguicas, frango, queijo coalho e buffet completo.</p>
+                <span data-i18n="special.period">Noite e fim de semana</span>
+                <h3 data-i18n="special.title">Rodízio especial</h3>
+                <p data-i18n="special.desc">Seleção ampliada de cortes, linguiças, frango, queijo coalho e buffet completo.</p>
                 <strong>99,90</strong>
               </article>
             </div>
 
             <div class="buffet-tabs" role="tablist" aria-label="Categorias do buffet de carnes">
-              <button class="buffet-tab is-active" type="button" data-target="buffet-cortes">Cortes</button>
-              <button class="buffet-tab" type="button" data-target="buffet-acompanhamentos">Acompanhamentos</button>
-              <button class="buffet-tab" type="button" data-target="buffet-saladas">Saladas</button>
-              <button class="buffet-tab" type="button" data-target="buffet-guarnicoes">Guarnicoes</button>
-              <button class="buffet-tab" type="button" data-target="buffet-molhos">Molhos</button>
+              <button class="buffet-tab is-active" type="button" data-target="buffet-cortes" data-i18n="buffet.cortes">Cortes</button>
+              <button class="buffet-tab" type="button" data-target="buffet-acompanhamentos" data-i18n="buffet.acompanhamentos">Acompanhamentos</button>
+              <button class="buffet-tab" type="button" data-target="buffet-saladas" data-i18n="buffet.saladas">Saladas</button>
+              <button class="buffet-tab" type="button" data-target="buffet-guarnicoes" data-i18n="buffet.guarnicoes">Guarnições</button>
+              <button class="buffet-tab" type="button" data-target="buffet-molhos" data-i18n="buffet.molhos">Molhos</button>
             </div>
 
             <div class="buffet-panels">
               <section class="buffet-panel is-active" id="buffet-cortes">
-                <article><span>Cortes da brasa</span><p>Picanha fatiada</p><p>Alcatra</p><p>Fraldinha</p><p>Costela bovina</p><p>Coracao de frango</p><p>Linguica toscana</p><p>Frango com bacon</p><p>Queijo coalho</p></article>
+                <article><span data-i18n="buffet.cortes.title">Cortes da brasa</span><p data-i18n="buffet.picanha">Picanha fatiada</p><p>Alcatra</p><p>Fraldinha</p><p data-i18n="buffet.costela">Costela bovina</p><p data-i18n="buffet.coracao">Coração de frango</p><p data-i18n="buffet.linguica">Linguiça toscana</p><p>Frango com bacon</p><p>Queijo coalho</p></article>
               </section>
               <section class="buffet-panel" id="buffet-acompanhamentos" hidden>
-                <article><span>Acompanhamentos</span><p>Arroz branco</p><p>Feijao tropeiro</p><p>Farofa da casa</p><p>Macaxeira frita</p><p>Batata frita</p><p>Vinagrete</p></article>
+                <article><span data-i18n="buffet.acompanhamentos">Acompanhamentos</span><p>Arroz branco</p><p data-i18n="buffet.feijao">Feijão tropeiro</p><p>Farofa da casa</p><p>Macaxeira frita</p><p>Batata frita</p><p>Vinagrete</p></article>
               </section>
               <section class="buffet-panel" id="buffet-saladas" hidden>
-                <article><span>Saladas</span><p>Mix de folhas</p><p>Tomate, cebola e coentro</p><p>Maionese de batata</p><p>Legumes cozidos</p><p>Salada de grao-de-bico</p><p>Molho de ervas</p></article>
+                <article><span data-i18n="buffet.saladas">Saladas</span><p>Mix de folhas</p><p>Tomate, cebola e coentro</p><p>Maionese de batata</p><p>Legumes cozidos</p><p data-i18n="buffet.grao">Salada de grão-de-bico</p><p>Molho de ervas</p></article>
               </section>
               <section class="buffet-panel" id="buffet-guarnicoes" hidden>
-                <article><span>Guarnicoes quentes</span><p>Pure de batata</p><p>Macarrao ao molho</p><p>Banana frita</p><p>Creme de milho</p><p>Legumes salteados</p><p>Polenta frita</p></article>
+                <article><span data-i18n="buffet.guarnicoes.quentes">Guarnições quentes</span><p data-i18n="buffet.pure">Purê de batata</p><p data-i18n="buffet.macarrao">Macarrão ao molho</p><p>Banana frita</p><p>Creme de milho</p><p>Legumes salteados</p><p>Polenta frita</p></article>
               </section>
               <section class="buffet-panel" id="buffet-molhos" hidden>
                 <article><span>Molhos</span><p>Chimichurri</p><p>Alho cremoso</p><p>Barbecue</p><p>Pimenta da casa</p><p>Mostarda e mel</p><p>Molho madeira</p></article>
@@ -101,25 +111,25 @@
 
           <section class="subpanel" id="rodizio-pizzas" hidden>
             <div class="menu-list">
-              <article class="menu-item"><div><span>Rodizio</span><h3>Rodizio de pizzas salgadas</h3><p>Sabores tradicionais e especiais servidos em fatias direto na mesa.</p></div><strong>59,90</strong></article>
-              <article class="menu-item"><div><span>Completo</span><h3>Rodizio de pizzas doces e salgadas</h3><p>Inclui pizzas doces no final do servico, com sabores de chocolate, banana e Romeu e Julieta.</p></div><strong>69,90</strong></article>
-              <article class="menu-item"><div><span>Kids</span><h3>Rodizio infantil</h3><p>Para criancas ate 10 anos, com pizzas salgadas e doces.</p></div><strong>34,90</strong></article>
+              <article class="menu-item"><div><span data-i18n="label.rodizio">Rodízio</span><h3 data-i18n="pizza.rodizio.title">Rodízio de pizzas salgadas</h3><p data-i18n="pizza.rodizio.desc">Sabores tradicionais e especiais servidos em fatias direto na mesa.</p></div><strong>59,90</strong></article>
+              <article class="menu-item"><div><span data-i18n="label.completo">Completo</span><h3 data-i18n="pizza.full.title">Rodízio de pizzas doces e salgadas</h3><p data-i18n="pizza.full.desc">Inclui pizzas doces no final do serviço, com sabores de chocolate, banana e Romeu e Julieta.</p></div><strong>69,90</strong></article>
+              <article class="menu-item"><div><span>Kids</span><h3 data-i18n="pizza.kids.title">Rodízio infantil</h3><p data-i18n="pizza.kids.desc">Para crianças até 10 anos, com pizzas salgadas e doces.</p></div><strong>34,90</strong></article>
             </div>
           </section>
 
           <section class="subpanel" id="rodizio-crepes" hidden>
             <div class="menu-list">
-              <article class="menu-item"><div><span>Rodizio</span><h3>Crepes salgados</h3><p>Massa fina com recheios de frango, queijo, carne de sol, presunto e calabresa.</p></div><strong>54,90</strong></article>
-              <article class="menu-item"><div><span>Completo</span><h3>Crepes salgados e doces</h3><p>Inclui recheios doces como chocolate, banana, doce de leite e goiabada com queijo.</p></div><strong>64,90</strong></article>
-              <article class="menu-item"><div><span>Mesa cheia</span><h3>Rodizio misto</h3><p>Pizza, crepe e buffet de apoio em uma experiencia unica para grupos.</p></div><strong>79,90</strong></article>
+              <article class="menu-item"><div><span data-i18n="label.rodizio">Rodízio</span><h3 data-i18n="crepe.savory.title">Crepes salgados</h3><p data-i18n="crepe.savory.desc">Massa fina com recheios de frango, queijo, carne de sol, presunto e calabresa.</p></div><strong>54,90</strong></article>
+              <article class="menu-item"><div><span data-i18n="label.completo">Completo</span><h3 data-i18n="crepe.full.title">Crepes salgados e doces</h3><p data-i18n="crepe.full.desc">Inclui recheios doces como chocolate, banana, doce de leite e goiabada com queijo.</p></div><strong>64,90</strong></article>
+              <article class="menu-item"><div><span data-i18n="crepe.group.label">Mesa cheia</span><h3 data-i18n="crepe.mixed.title">Rodízio misto</h3><p data-i18n="crepe.mixed.desc">Pizza, crepe e buffet de apoio em uma experiência única para grupos.</p></div><strong>79,90</strong></article>
             </div>
           </section>
 
           <section class="subpanel" id="rodizio-sushis" hidden>
             <div class="menu-list">
-              <article class="menu-item"><div><span>Rodizio</span><h3>Sushis tradicionais</h3><p>Hossomaki, uramaki, niguiri, hot roll e entradas simples servidas em sequencia.</p></div><strong>69,90</strong></article>
-              <article class="menu-item"><div><span>Completo</span><h3>Sushis especiais</h3><p>Inclui salmao, skin, kani, cream cheese, hot roll e sugestoes do sushiman.</p></div><strong>79,90</strong></article>
-              <article class="menu-item"><div><span>Entrada</span><h3>Sunomono e harumaki</h3><p>Opcoes leves para abrir o servico japones.</p></div><strong>Incluso</strong></article>
+              <article class="menu-item"><div><span data-i18n="label.rodizio">Rodízio</span><h3 data-i18n="sushi.traditional.title">Sushis tradicionais</h3><p data-i18n="sushi.traditional.desc">Hossomaki, uramaki, niguiri, hot roll e entradas simples servidas em sequência.</p></div><strong>69,90</strong></article>
+              <article class="menu-item"><div><span data-i18n="label.completo">Completo</span><h3 data-i18n="sushi.special.title">Sushis especiais</h3><p data-i18n="sushi.special.desc">Inclui salmão, skin, kani, cream cheese, hot roll e sugestões do sushiman.</p></div><strong>79,90</strong></article>
+              <article class="menu-item"><div><span data-i18n="label.entrada">Entrada</span><h3>Sunomono e harumaki</h3><p data-i18n="sushi.entry.desc">Opções leves para abrir o serviço japonês.</p></div><strong data-i18n="price.included">Incluso</strong></article>
             </div>
           </section>
         </div>
@@ -127,76 +137,76 @@
 
       <section class="panel" id="panel-sobremesas" role="tabpanel" hidden>
         <div class="section-hero">
-          <div><span>Final doce</span><h2>Sobremesas</h2><p>Classicos simples para fechar o almoco ou o rodizio.</p></div>
+          <div><span data-i18n="desserts.eyebrow">Final doce</span><h2 data-i18n="nav.sobremesas">Sobremesas</h2><p data-i18n="desserts.desc">Clássicos simples para fechar o almoço ou o rodízio.</p></div>
           <img src="assets/icon-chef-clean.png" alt="">
         </div>
         <div class="price-grid">
-          <article><h3>Pudim de leite</h3><strong>12,90</strong><span>Fatia</span></article>
-          <article><h3>Cartola</h3><strong>19,90</strong><span>Banana, queijo e canela</span></article>
-          <article><h3>Brownie com sorvete</h3><strong>22,90</strong><span>Chocolate</span></article>
-          <article><h3>Taca de sorvete</h3><strong>14,90</strong><span>2 bolas</span></article>
-          <article><h3>Petit gateau</h3><strong>24,90</strong><span>Com sorvete</span></article>
+          <article><h3 data-i18n="dessert.pudim">Pudim de leite</h3><strong>12,90</strong><span data-i18n="portion.slice">Fatia</span></article>
+          <article><h3>Cartola</h3><strong>19,90</strong><span data-i18n="dessert.cartola.desc">Banana, queijo e canela</span></article>
+          <article><h3 data-i18n="dessert.brownie">Brownie com sorvete</h3><strong>22,90</strong><span>Chocolate</span></article>
+          <article><h3 data-i18n="dessert.icecream">Taça de sorvete</h3><strong>14,90</strong><span data-i18n="dessert.icecream.desc">2 bolas</span></article>
+          <article><h3>Petit gateau</h3><strong>24,90</strong><span data-i18n="dessert.withicecream">Com sorvete</span></article>
           <article><h3>Romeu e Julieta</h3><strong>16,90</strong><span>Queijo e goiabada</span></article>
         </div>
       </section>
 
       <section class="panel" id="panel-bebidas" role="tabpanel" hidden>
         <div class="section-hero">
-          <div><span>Sem alcool</span><h2>Bebidas</h2><p>Refrigerantes, sucos, agua e opcoes para acompanhar o almoco.</p></div>
+          <div><span data-i18n="drinks.na">Sem álcool</span><h2 data-i18n="nav.bebidas">Bebidas</h2><p data-i18n="bebidas.desc">Refrigerantes, sucos, água e opções para acompanhar o almoço.</p></div>
           <img src="assets/icon-bebidas-clean.png" alt="">
         </div>
         <div class="price-grid dense">
-          <article><h3>Agua sem gas</h3><strong>5,00</strong><span>500 ml</span></article>
-          <article><h3>Agua com gas</h3><strong>6,00</strong><span>500 ml</span></article>
-          <article><h3>Refrigerante lata</h3><strong>7,00</strong><span>Coca, Guarana, Fanta</span></article>
-          <article><h3>Refrigerante 1L</h3><strong>12,00</strong><span>Para mesa</span></article>
-          <article><h3>Suco copo</h3><strong>9,00</strong><span>Acerola, caja, goiaba</span></article>
-          <article><h3>Suco jarra</h3><strong>24,00</strong><span>1 litro</span></article>
-          <article><h3>Agua de coco</h3><strong>10,00</strong><span>Copo</span></article>
-          <article><h3>Cha gelado</h3><strong>8,00</strong><span>Lata</span></article>
-          <article><h3>Energético</h3><strong>14,00</strong><span>Lata</span></article>
+          <article><h3 data-i18n="drink.water.still">Água sem gás</h3><strong>5,00</strong><span>500 ml</span></article>
+          <article><h3 data-i18n="drink.water.sparkling">Água com gás</h3><strong>6,00</strong><span>500 ml</span></article>
+          <article><h3 data-i18n="drink.soda.can">Refrigerante lata</h3><strong>7,00</strong><span>Coca, Guaraná, Fanta</span></article>
+          <article><h3 data-i18n="drink.soda.liter">Refrigerante 1L</h3><strong>12,00</strong><span data-i18n="drink.table">Para mesa</span></article>
+          <article><h3 data-i18n="drink.juice.glass">Suco copo</h3><strong>9,00</strong><span>Acerola, cajá, goiaba</span></article>
+          <article><h3 data-i18n="drink.juice.pitcher">Suco jarra</h3><strong>24,00</strong><span>1 litro</span></article>
+          <article><h3 data-i18n="drink.coconut">Água de coco</h3><strong>10,00</strong><span>Copo</span></article>
+          <article><h3 data-i18n="drink.icedtea">Chá gelado</h3><strong>8,00</strong><span>Lata</span></article>
+          <article><h3 data-i18n="drink.energy">Energético</h3><strong>14,00</strong><span data-i18n="drink.can">Lata</span></article>
         </div>
       </section>
 
       <section class="panel" id="panel-drinks" role="tabpanel" hidden>
         <div class="section-hero">
-          <div><span>Bar</span><h2>Drinks</h2><p>Classicos da casa para noite, grupos e celebracoes.</p></div>
+          <div><span>Bar</span><h2 data-i18n="nav.drinks">Drinks</h2><p data-i18n="drinks.desc">Clássicos da casa para noite, grupos e celebrações.</p></div>
           <img src="assets/icon-drinks-clean.png" alt="">
         </div>
         <div class="menu-list">
-          <article class="menu-item"><div><span>Classico</span><h3>Caipirinha</h3><p>Limao, cachaca e acucar.</p></div><strong>18,00</strong></article>
-          <article class="menu-item"><div><span>Vodka</span><h3>Caipiroska</h3><p>Vodka, fruta da casa e gelo.</p></div><strong>22,00</strong></article>
-          <article class="menu-item"><div><span>Gin</span><h3>Gin tonica</h3><p>Gin, tonica, limao e especiarias.</p></div><strong>28,00</strong></article>
-          <article class="menu-item"><div><span>Refrescante</span><h3>Mojito</h3><p>Rum, hortela, limao e agua com gas.</p></div><strong>24,00</strong></article>
-          <article class="menu-item"><div><span>Sem alcool</span><h3>Coquetel de frutas</h3><p>Frutas, leite condensado e gelo.</p></div><strong>16,00</strong></article>
+          <article class="menu-item"><div><span data-i18n="label.classico">Clássico</span><h3>Caipirinha</h3><p data-i18n="drink.caipirinha.desc">Limão, cachaça e açúcar.</p></div><strong>18,00</strong></article>
+          <article class="menu-item"><div><span>Vodka</span><h3>Caipiroska</h3><p data-i18n="drink.caipiroska.desc">Vodka, fruta da casa e gelo.</p></div><strong>22,00</strong></article>
+          <article class="menu-item"><div><span>Gin</span><h3 data-i18n="drink.gin.title">Gin tônica</h3><p data-i18n="drink.gin.desc">Gin, tônica, limão e especiarias.</p></div><strong>28,00</strong></article>
+          <article class="menu-item"><div><span data-i18n="label.refreshing">Refrescante</span><h3>Mojito</h3><p data-i18n="drink.mojito.desc">Rum, hortelã, limão e água com gás.</p></div><strong>24,00</strong></article>
+          <article class="menu-item"><div><span data-i18n="drinks.na">Sem álcool</span><h3 data-i18n="drink.mocktail.title">Coquetel de frutas</h3><p data-i18n="drink.mocktail.desc">Frutas, leite condensado e gelo.</p></div><strong>16,00</strong></article>
         </div>
       </section>
 
       <section class="panel" id="panel-vinhos" role="tabpanel" hidden>
         <div class="section-hero">
-          <div><span>Carta simples</span><h2>Vinhos</h2><p>Rotulos faceis de harmonizar com carnes, pizza e massas.</p></div>
+          <div><span data-i18n="wine.eyebrow">Carta simples</span><h2 data-i18n="nav.vinhos">Vinhos</h2><p data-i18n="wine.desc">Rótulos fáceis de harmonizar com carnes, pizza e massas.</p></div>
           <img src="assets/icon-vinhos-clean.png" alt="">
         </div>
         <div class="wine-stack">
-          <article><h3>Tintos</h3><p>Cabernet Sauvignon nacional 89,00 · Malbec argentino 110,00 · Carmenere chileno 105,00 · Merlot nacional 92,00</p></article>
-          <article><h3>Brancos</h3><p>Chardonnay 92,00 · Sauvignon Blanc 98,00 · Vinho verde 86,00</p></article>
-          <article><h3>Rose e espumantes</h3><p>Rose seco 94,00 · Espumante brut 98,00 · Espumante moscatel 89,00</p></article>
-          <article><h3>Tacas</h3><p>Tinto da casa 24,00 · Branco da casa 24,00 · Espumante 26,00</p></article>
+          <article><h3 data-i18n="wine.red">Tintos</h3><p data-i18n="wine.red.list">Cabernet Sauvignon nacional 89,00 · Malbec argentino 110,00 · Carmenere chileno 105,00 · Merlot nacional 92,00</p></article>
+          <article><h3 data-i18n="wine.white">Brancos</h3><p data-i18n="wine.white.list">Chardonnay 92,00 · Sauvignon Blanc 98,00 · Vinho verde 86,00</p></article>
+          <article><h3 data-i18n="wine.rose">Rosés e espumantes</h3><p data-i18n="wine.rose.list">Rosé seco 94,00 · Espumante brut 98,00 · Espumante moscatel 89,00</p></article>
+          <article><h3 data-i18n="wine.glass">Taças</h3><p data-i18n="wine.glass.list">Tinto da casa 24,00 · Branco da casa 24,00 · Espumante 26,00</p></article>
         </div>
       </section>
 
       <section class="panel" id="panel-info" role="tabpanel" hidden>
         <div class="section-hero">
-          <div><span>Restaurante</span><h2>Informacoes</h2><p>Central da Picanha, Encruzilhada, Recife.</p></div>
+          <div><span data-i18n="info.eyebrow">Restaurante</span><h2 data-i18n="info.title">Informações</h2><p>Central da Picanha, Encruzilhada, Recife.</p></div>
           <img src="assets/logo-central-picanha.png" alt="">
         </div>
         <div class="info-grid">
-          <article><span>Endereco</span><p>R. Fernando Cesar, 290 - Encruzilhada, Recife</p></article>
+          <article><span data-i18n="info.address">Endereço</span><p>R. Fernando César, 290 - Encruzilhada, Recife</p></article>
           <article><span>Telefone</span><p>(81) 3204-6339</p></article>
           <article><span>WhatsApp</span><p>(81) 98209-8401</p></article>
           <article><span>Instagram</span><p>@centraldapicanharecife</p></article>
-          <article><span>Horario</span><p>Todos os dias, 11h30 - 23h</p></article>
-          <article><span>Especialidade</span><p>Rodizio de carnes, pizzas, crepes e sushi</p></article>
+          <article><span data-i18n="info.hours">Horário</span><p data-i18n="info.hours.desc">Todos os dias, 11h30 - 23h</p></article>
+          <article><span data-i18n="info.specialty">Especialidade</span><p data-i18n="info.specialty.desc">Rodízio de carnes, pizzas, crepes e sushi</p></article>
         </div>
       </section>
     </div>
